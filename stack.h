@@ -17,5 +17,6 @@ bool isEmpty (struct stackNode* stack);
 void clearStack (struct stackNode** stack);
 int getStackSize (struct stackNode* stack);
 void printStack (struct stackNode* stack);
+void reverseStack (struct stackNode** stack);
 
 #endif

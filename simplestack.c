@@ -27,6 +27,9 @@ int main() {
     printf("\nNew first element: %d", peek(stack));
     printf("\nPrinting again: ");
     printStack(stack);
+    printf("\nReversing the stack: ");
+    reverseStack(&stack);
+    printStack(stack);
     printf("\nDeleting random list... ");
     clearStack(&stack);
     printf("Deleted!\n");

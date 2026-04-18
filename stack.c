@@ -67,7 +67,7 @@ void printStack (struct stackNode* stack) {
     printf("NULL");
 }
 
-void reverseStack(struct stackNode** stack) {
+void reverseStack (struct stackNode** stack) {
     struct stackNode* prevNode = NULL;
     struct stackNode* currentNode = *stack;
     struct stackNode* nextNode;
