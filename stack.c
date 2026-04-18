@@ -66,3 +66,18 @@ void printStack (struct stackNode* stack) {
     }
     printf("NULL");
 }
+
+void reverseStack(struct stackNode** stack) {
+    struct stackNode* prevNode = NULL;
+    struct stackNode* currentNode = *stack;
+    struct stackNode* nextNode;
+
+    while (currentNode != NULL) {
+        nextNode = currentNode->next;
+        currentNode->next = prevNode;
+        prevNode = currentNode;
+        currentNode = nextNode;
+    }
+
+    *stack = prevNode;
+}
