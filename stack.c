@@ -48,3 +48,13 @@ void clearStack (struct stackNode** stack) {
 
     *stack = NULL;
 }
+
+int getStackSize (struct stackNode* stack) {
+    int count = 0;
+    while (stack != NULL) {
+        count++;
+        stack = stack->next;
+    }
+
+    return count;
+}
