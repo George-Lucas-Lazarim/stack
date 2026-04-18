@@ -18,5 +18,6 @@ void clearStack (struct stackNode** stack);
 int getStackSize (struct stackNode* stack);
 void printStack (struct stackNode* stack);
 void reverseStack (struct stackNode** stack);
+void sortStack (struct stackNode** stack);
 
 #endif

@@ -81,3 +81,18 @@ void reverseStack (struct stackNode** stack) {
 
     *stack = prevNode;
 }
+
+void sortStack (struct stackNode** stack) {
+    struct stackNode* tempStack = NULL;
+    int temp;
+
+    while (!isEmpty(*stack)) {
+        temp = pop(stack);
+
+        while(!isEmpty(tempStack) && peek(tempStack) > temp) *stack = push(*stack, pop(&tempStack));
+
+        tempStack = push(tempStack, temp);
+    }
+
+    *stack = tempStack;
+}
