@@ -37,13 +37,13 @@ bool isEmpty (struct stackNode* stack) {
 }
 
 void clearStack (struct stackNode** stack) {
-    struct stackNode* currentNode;
-    struct stackNode* freeNode = *stack;
+    struct stackNode* currentNode = *stack;
+    struct stackNode* nextNode;
 
     while (currentNode != NULL) {
-        currentNode = freeNode->next;
-        free(freeNode);
-        freeNode = currentNode;
+        nextNode = currentNode->next;
+        free(currentNode);
+        currentNode = nextNode;
     }
 
     *stack = NULL;
