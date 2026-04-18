@@ -22,14 +22,20 @@ int main() {
     printf("\nPrinting the stack with %d elements: ", getStackSize(stack));
     printStack(stack);
 
-    printf("\nRemoving the first element from the stack and then peeking: ");
     printf("\nElement removed: %d", pop(&stack));
     printf("\nNew first element: %d", peek(stack));
+
     printf("\nPrinting again: ");
     printStack(stack);
+
     printf("\nReversing the stack: ");
     reverseStack(&stack);
     printStack(stack);
+
+    printf("\nArranging the stack in descending order: ");
+    sortStack(&stack);
+    printStack(stack);
+
     printf("\nDeleting random list... ");
     clearStack(&stack);
     printf("Deleted!\n");
