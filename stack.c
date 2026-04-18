@@ -58,3 +58,11 @@ int getStackSize (struct stackNode* stack) {
 
     return count;
 }
+
+void printStack (struct stackNode* stack) {
+    while (stack != NULL) {
+        printf("%d -> ", stack->data);
+        stack = stack->next;
+    }
+    printf("NULL");
+}

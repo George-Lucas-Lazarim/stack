@@ -16,5 +16,6 @@ int peek (struct stackNode* stack);
 bool isEmpty (struct stackNode* stack);
 void clearStack (struct stackNode** stack);
 int getStackSize (struct stackNode* stack);
+void printStack (struct stackNode* stack);
 
 #endif
